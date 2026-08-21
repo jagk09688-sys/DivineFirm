@@ -48,8 +48,8 @@ body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
 
 /* Optional hero image holder (place an image in assets/hero.jpg to use) */
 .hero-image{
-  width:360px;height:320px;background-size:cover;background-position:center;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.06);
-  display:block;
+  width:100%;height:420px;background-size:cover;background-position:center;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.06);
+  display:block;position:relative;overflow:hidden;
 }
 .brand-logo{height:auto}
 h1{font-size:3rem;margin:.2rem 0 .6rem;line-height:1.02;font-weight:800;letter-spacing:-0.01em}
@@ -57,9 +57,14 @@ h1{font-size:3rem;margin:.2rem 0 .6rem;line-height:1.02;font-weight:800;letter-s
 .hero-actions{display:flex;gap:.75rem;margin:1rem 0;z-index:2}
 .hero-points{list-style:none;padding:0;display:flex;gap:1rem;margin:1rem 0 0}
 .hero-card{background:#fff;padding:1.25rem;border-radius:12px;box-shadow:0 10px 30px rgba(11,136,217,0.06);z-index:2}
+.hero-card.overlay{position:absolute;left:20px;bottom:20px;max-width:320px}
+.card-pill{background:linear-gradient(90deg,#10b981,#0b88d9);color:#fff;padding:.45rem .6rem;border-radius:999px;display:inline-block;font-weight:700;margin-bottom:.6rem;font-size:.85rem}
+.mini-stat{display:flex;gap:.5rem;align-items:baseline;margin:.45rem 0}
+.mini-stat strong{font-size:1.35rem}
 .service-preview{display:flex;gap:.75rem;align-items:center;margin-top:1rem}
 .trust-bar{background:#f8fafc;padding:.8rem 0;border-top:1px solid #eef2f7}
 .trust-grid{display:flex;gap:1.6rem;justify-content:center;color:var(--muted);font-weight:600}
+.trust-grid span{display:inline-flex;align-items:center;gap:.6rem;padding:.2rem .6rem;border-radius:999px;background:rgba(15,23,42,0.02)}
 .section{padding:2.4rem 0}
 .section-heading{margin-bottom:1rem}
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
