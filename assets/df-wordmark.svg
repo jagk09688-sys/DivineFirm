@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="64" viewBox="0 0 300 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Divine Firm wordmark">
+  <defs>
+    <style>
+      .wf{font-family:Inter, Arial, Helvetica, sans-serif; font-weight:800; fill:#0f172a}
+      .sub{font-family:Inter, Arial, Helvetica, sans-serif; font-weight:600; fill:#066aa8}
+    </style>
+  </defs>
+  <g transform="translate(0,0)">
+    <rect x="0" y="0" width="56" height="56" rx="10" fill="#0B88D9" />
+    <text x="28" y="36" text-anchor="middle" dominant-baseline="central" font-size="28" fill="#fff" font-weight="800">DF</text>
+    <text x="80" y="22" class="wf" font-size="20">Divine Firm</text>
+    <text x="80" y="42" class="sub" font-size="12">Professional Cleaning Services</text>
+  </g>
+</svg>

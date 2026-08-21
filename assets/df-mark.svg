@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DF mark">
+  <rect width="120" height="120" rx="18" fill="#0B88D9" />
+  <g fill="#fff" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="800" font-size="62" text-anchor="middle" dominant-baseline="central">
+    <text x="54" y="68">D</text>
+    <text x="86" y="68" font-size="54" fill="#10B981">F</text>
+  </g>
+</svg>
