@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="DF Online mark">
-  <rect width="120" height="120" rx="20" fill="#0B88D9" />
-  <text x="30" y="74" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="800" font-size="56" fill="#ffffff">DF</text>
-  <rect x="70" y="18" width="34" height="20" rx="6" fill="#10B981" />
-  <text x="87" y="33" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="700" font-size="10" fill="#013827" text-anchor="middle">ON</text>
-</svg>
