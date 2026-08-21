@@ -33,15 +33,21 @@ body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
 .hero::after{
   content:"";
   position:absolute;
-  right:2%;
-  top:8%;
-  width:320px;
-  height:320px;
-  background: radial-gradient(circle at 30% 30%, rgba(16,185,129,0.12), rgba(11,136,217,0.04));
+  right:4%;
+  top:14%;
+  width:220px;
+  height:220px;
+  background: radial-gradient(circle at 30% 30%, rgba(16,185,129,0.09), rgba(11,136,217,0.03));
   border-radius:50%;
   pointer-events:none;
-  filter:blur(18px);
+  filter:blur(14px);
   z-index:0;
+}
+
+/* Optional hero image holder (place an image in assets/hero.jpg to use) */
+.hero-image{
+  width:360px;height:320px;background-size:cover;background-position:center;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.06);
+  display:block;
 }
 h1{font-size:2.4rem;margin:.2rem 0 .6rem;line-height:1.02}
 .lead{color:var(--muted);max-width:48ch;line-height:1.6}
