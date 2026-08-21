@@ -1,10 +1,10 @@
 /* Basic theme and layout */
 :root{
   --bg:#ffffff;
-  --primary:#0056a6;
-  --primary-dark:#003f7a;
+  --primary:#0ba987; /* teal */
+  --primary-dark:#088e73; /* darker teal */
   --muted:#374151;
-  --accent:#10b981;
+  --accent:#0ba987;
   --max-width:1200px;
   font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
   --base-size:16px;
@@ -79,7 +79,7 @@ h1{font-size:3.6rem;margin:.15rem 0 .6rem;line-height:1.02;font-weight:800;lette
 .hero-points{list-style:none;padding:0;display:flex;gap:1rem;margin:1rem 0 0}
 .hero-card{background:#fff;padding:1.35rem;border-radius:14px;box-shadow:0 20px 40px rgba(2,6,23,0.08);z-index:2}
 .hero-card.overlay{position:absolute;left:20px;bottom:20px;max-width:320px}
-.card-pill{background:linear-gradient(90deg,#10b981,#0b88d9);color:#fff;padding:.45rem .6rem;border-radius:999px;display:inline-block;font-weight:700;margin-bottom:.6rem;font-size:.85rem}
+.card-pill{background:linear-gradient(90deg,var(--accent),var(--primary));color:#fff;padding:.45rem .6rem;border-radius:999px;display:inline-block;font-weight:700;margin-bottom:.6rem;font-size:.85rem}
 .mini-stat{display:flex;gap:.5rem;align-items:baseline;margin:.45rem 0}
 .mini-stat strong{font-size:1.35rem}
 .service-preview{display:flex;gap:.75rem;align-items:center;margin-top:1rem}
