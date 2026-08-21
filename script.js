@@ -15,4 +15,36 @@ document.addEventListener('DOMContentLoaded', function(){
       if(mt) mt.setAttribute('aria-expanded','false');
     })
   })
+
+  // Header scroll effect
+  const onScroll = () => {
+    if(window.scrollY > 40) header.classList.add('scrolled'); else header.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  // Testimonials slider
+  const slides = Array.from(document.querySelectorAll('.testimonial-card'));
+  if(slides.length){
+    let idx = 0;
+    const show = i => {
+      slides.forEach((s,si)=> s.classList.toggle('active', si===i));
+    }
+    show(0);
+    const next = ()=>{ idx = (idx+1) % slides.length; show(idx); }
+    const prev = ()=>{ idx = (idx-1+slides.length) % slides.length; show(idx); }
+    let timer = setInterval(next, 5000);
+    const controls = document.querySelector('.slider-controls');
+    if(controls){
+      controls.querySelector('.next').addEventListener('click', ()=>{ next(); clearInterval(timer); timer = setInterval(next,5000); });
+      controls.querySelector('.prev').addEventListener('click', ()=>{ prev(); clearInterval(timer); timer = setInterval(next,5000); });
+    }
+  }
+
+  // Mobile quick action show/hide
+  const quick = document.createElement('div');
+  quick.className = 'quick-action';
+  quick.innerHTML = '<a href="#contact">Get a Free Quote</a><small>Call +61 410 093 694</small>';
+  document.body.appendChild(quick);
+  const mqShow = ()=>{ if(window.innerWidth < 480) quick.style.display='flex'; else quick.style.display='none'; }
+  mqShow(); window.addEventListener('resize', mqShow);
 });

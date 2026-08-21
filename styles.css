@@ -65,6 +65,20 @@ h1{font-size:3rem;margin:.2rem 0 .6rem;line-height:1.02;font-weight:800;letter-s
 .trust-bar{background:#f8fafc;padding:.8rem 0;border-top:1px solid #eef2f7}
 .trust-grid{display:flex;gap:1.6rem;justify-content:center;color:var(--muted);font-weight:600}
 .trust-grid span{display:inline-flex;align-items:center;gap:.6rem;padding:.2rem .6rem;border-radius:999px;background:rgba(15,23,42,0.02)}
+
+/* Testimonials slider */
+.testimonials-slider{position:relative;display:flex;gap:1rem;align-items:stretch}
+.testimonial-card{flex:1;background:#fff;padding:1.2rem;border-radius:10px;box-shadow:0 8px 30px rgba(2,6,23,0.06);opacity:0;transform:translateX(20px);transition:opacity .35s ease,transform .35s ease;height:180px;display:flex;flex-direction:column;justify-content:space-between}
+.testimonial-card.active{opacity:1;transform:translateX(0)}
+.testimonial-card p{color:var(--muted);margin:0 0 .6rem}
+.testimonial-card footer{font-size:.9rem;color:var(--primary-dark)}
+.slider-controls{position:absolute;right:8px;top:8px;display:flex;gap:.5rem}
+.slider-controls button{background:rgba(15,23,42,0.06);border:0;padding:.35rem .6rem;border-radius:8px;cursor:pointer}
+
+/* Sticky quick action bar for mobile */
+.quick-action{position:fixed;left:16px;right:16px;bottom:16px;background:var(--primary);color:#fff;padding:.85rem 1rem;border-radius:12px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 14px 30px rgba(11,136,217,0.12);z-index:200}
+.quick-action a{color:#fff;text-decoration:none;font-weight:700}
+.quick-action small{opacity:.9}
 .section{padding:2.4rem 0}
 .section-heading{margin-bottom:1rem}
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
@@ -92,6 +106,9 @@ h1{font-size:3rem;margin:.2rem 0 .6rem;line-height:1.02;font-weight:800;letter-s
   .site-header.nav-open .main-nav{display:flex;flex-direction:column;position:fixed;top:72px;right:16px;left:16px;background:rgba(255,255,255,0.98);padding:1rem;border-radius:12px;box-shadow:0 14px 40px rgba(2,6,23,0.12);z-index:140}
   .site-header.nav-open .main-nav a{padding:.9rem 1rem;color:var(--primary-dark);white-space:nowrap}
   .site-header.nav-open::after{content:"";position:fixed;left:0;right:0;top:0;bottom:0;background:rgba(2,6,23,0.25);z-index:130}
+  .testimonials-slider{flex-direction:column}
+  .testimonial-card{height:auto}
+  .slider-controls{position:static;margin-top:.6rem}
 }
 
 @media (min-width:901px){
