@@ -308,38 +308,54 @@
         </div>
       </section>
 
-      <section id="testimonials" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">What clients say</p>
-            <h2>Real feedback from recent customers</h2>
-          </div>
+     <section id="testimonials" class="section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">What clients say</p>
+      <h2>Real feedback from recent customers</h2>
+    </div>
 
-          <div class="testimonials-slider" aria-live="polite">
-            <blockquote class="testimonial-card active">
-              <p>“Divine Firm were punctual, thorough and left our home spotless. Highly recommend — great communication and friendly team.”</p>
-              <footer><strong>Emma R.</strong> <span>Homeowner</span></footer>
-            </blockquote>
+    <div class="testimonials-slider" aria-live="polite">
 
-            <blockquote class="testimonial-card">
-              <p>“Professional service for our office. The team were discreet, efficient, and the result was excellent.”</p>
-              <footer><strong>Mark S.</strong> <span>Office Manager</span></footer>
-            </blockquote>
+      <!-- Testimonial 1 -->
+      <blockquote class="testimonial-card active">
+        <p>“Divine Firm were punctual, thorough and left our home spotless. Highly recommend — great communication and friendly team.”</p>
+        <footer>
+          <strong>Emma R.</strong>
+          <span>Homeowner</span>
+        </footer>
+      </blockquote>
 
-            <blockquote class="testimonial-card">
-              <p>“Booked a deep clean before moving out — made the process so much easier. Fantastic attention to detail.”</p>
-              <footer><strong>Sophia T.</strong> <span>Tenant</span></footer>
-            </blockquote>
+      <!-- Testimonial 2 -->
+      <blockquote class="testimonial-card">
+        <p>“Professional service for our office. The team were discreet, efficient, and the result was excellent.”</p>
+        <footer>
+          <strong>Mark S.</strong>
+          <span>Office Manager</span>
+        </footer>
+      </blockquote>
 
-            <div class="slider-controls" aria-hidden="false">
-              <button class="prev">‹</button>
-              <button class="next">›</button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- Testimonial 3 -->
+      <blockquote class="testimonial-card">
+        <p>“Booked a deep clean before moving out — made the process so much easier. Fantastic attention to detail.”</p>
+        <footer>
+          <strong>Sophia T.</strong>
+          <span>Tenant</span>
+        </footer>
+      </blockquote>
 
-     <section id="contact" class="section cta-section">
+      <!-- Slider Controls -->
+      <div class="slider-controls">
+        <button class="prev" aria-label="Previous testimonial">‹</button>
+        <button class="next" aria-label="Next testimonial">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section cta-section">
   <div class="container cta-grid">
 
     <!-- Contact Copy -->
@@ -351,14 +367,8 @@
       </p>
 
       <ul class="contact-list">
-        <li>
-          <strong>📞 Call:</strong>
-          <a href="tel:+61410093694">+61 410 093 694</a>
-        </li>
-        <li>
-          <strong>✉️ Email:</strong>
-          <a href="mailto:divinefirm30@gmail.com">divinefirm30@gmail.com</a>
-        </li>
+        <li><strong>📞 Call:</strong> <a href="tel:+61410093694">+61 410 093 694</a></li>
+        <li><strong>✉️ Email:</strong> <a href="mailto:divinefirm30@gmail.com">divinefirm30@gmail.com</a></li>
         <li>
           <strong>📍 Address:</strong>
           <a href="https://www.google.com/maps/search/24+Borthwick+Parade+Clyde+North+VIC"
@@ -366,9 +376,7 @@
             24 Borthwick Parade, Clyde North, VIC
           </a>
         </li>
-        <li>
-          <strong>🧾 ABN:</strong> 90 701 540 338
-        </li>
+        <li><strong>🧾 ABN:</strong> 90 701 540 338</li>
       </ul>
     </div>
 
@@ -382,107 +390,119 @@
       <input type="hidden" name="_subject" value="New enquiry from Divine Firm website">
       <input type="hidden" name="_captcha" value="false">
       <input type="text" name="_honey" class="hp-field"
-             aria-hidden="true"
-             tabindex="-1"
-             autocomplete="off"
+             aria-hidden="true" tabindex="-1" autocomplete="off"
              style="position:absolute;left:-9999px;">
 
       <!-- Full Name -->
       <div class="form-group">
         <label for="full-name">Full name <span class="required">*</span></label>
         <input id="full-name" type="text" name="full_name"
-               placeholder="First and last name"
-               required autocomplete="name">
+               placeholder="First and last name" required autocomplete="name">
       </div>
 
       <!-- Email -->
       <div class="form-group">
         <label for="email">Email address <span class="required">*</span></label>
         <input id="email" type="email" name="email"
-               placeholder="you@example.com"
-               required autocomplete="email">
+               placeholder="you@example.com" required autocomplete="email">
       </div>
 
       <!-- Phone -->
       <div class="form-group">
         <label for="phone">Phone (optional)</label>
         <input id="phone" type="tel" name="phone"
-               placeholder="0410 093 694"
-               autocomplete="tel">
+               placeholder="0410 093 694" autocomplete="tel">
       </div>
 
       <!-- Services -->
-      <fieldset class="form-group">
-        <legend>Service needed</legend>
+      <div class="form-group">
+        <fieldset class="service-options">
+          <legend class="form-legend">Service needed</legend>
 
-        <label class="checkbox-inline">
-          <input type="checkbox" name="service[]" value="Residential Cleaning">
-          Residential Cleaning
-        </label>
+          <div class="checkbox-group">
+            <label class="checkbox-item">
+              <input type="checkbox" name="service[]" value="Residential Cleaning">
+              <span>Residential Cleaning</span>
+            </label>
 
-        <label class="checkbox-inline">
-          <input type="checkbox" name="service[]" value="Commercial Cleaning">
-          Commercial Cleaning
-        </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="service[]" value="Commercial Cleaning">
+              <span>Commercial Cleaning</span>
+            </label>
 
-        <label class="checkbox-inline">
-          <input type="checkbox" name="service[]" value="Deep Cleaning">
-          Deep Cleaning
-        </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="service[]" value="Deep Cleaning">
+              <span>Deep Cleaning</span>
+            </label>
 
-        <label class="checkbox-inline">
-          <input type="checkbox" name="service[]" value="Move-In / Move-Out">
-          Move-In / Move-Out
-        </label>
-      </fieldset>
+            <label class="checkbox-item">
+              <input type="checkbox" name="service[]" value="Move-In / Move-Out">
+              <span>Move-In / Move-Out</span>
+            </label>
+          </div>
+        </fieldset>
+      </div>
 
       <!-- Message -->
-      <!-- Services -->
-<div class="form-group">
-  <fieldset class="service-options">
-    <legend class="form-legend">Service needed</legend>
+      <div class="form-group">
+        <label for="message">Additional details</label>
+        <textarea id="message" name="message"
+                  placeholder="Tell us about your space, approximate size, preferred dates, and any special requests"
+                  rows="4"></textarea>
+      </div>
 
-    <div class="checkbox-group">
-      <label class="checkbox-item">
-        <input type="checkbox" name="service[]" value="Residential Cleaning">
-        <span>Residential Cleaning</span>
-      </label>
+      <!-- Consent -->
+      <div class="form-group consent-group">
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span>I agree to be contacted by Divine Firm about this enquiry.</span>
+        </label>
+      </div>
 
-      <label class="checkbox-item">
-        <input type="checkbox" name="service[]" value="Commercial Cleaning">
-        <span>Commercial Cleaning</span>
-      </label>
+      <!-- Submit -->
+      <button type="submit" class="btn btn-primary form-btn">
+        Request a Free Quote
+      </button>
+    </form>
 
-      <label class="checkbox-item">
-        <input type="checkbox" name="service[]" value="Deep Cleaning">
-        <span>Deep Cleaning</span>
-      </label>
+  </div>
+</section>
 
-      <label class="checkbox-item">
-        <input type="checkbox" name="service[]" value="Move-In / Move-Out">
-        <span>Move-In / Move-Out</span>
-      </label>
-    </div>
-  </fieldset>
-</div>
 
-<!-- Message -->
-<div class="form-group">
-  <label for="message">Additional details</label>
-  <textarea id="message" name="message"
-            placeholder="Tell us about your space, approximate size, preferred dates, and any special requests"
-            rows="4"></textarea>
-</div>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-wrap">
+    <p>© <span id="year"></span> Divine Firm. All rights reserved.</p>
+    <nav class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
 
-<!-- Consent -->
-<div class="form-group consent-group">
-  <label class="consent">
-    <input type="checkbox" name="consent" required>
-    <span>I agree to be contacted by Divine Firm about this enquiry.</span>
-  </label>
-</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Divine Firm",
+  "telephone": "+61410093694",
+  "email": "jag@divinefirm.online",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "24 Borthwick Parade",
+    "addressLocality": "Clyde North",
+    "addressRegion": "VIC",
+    "postalCode": "3978",
+    "addressCountry": "AU"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "ABN",
+    "value": "90 701 540 338"
+  },
+  "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"]
+}
+</script>
 
-<!-- Submit -->
-<button type="submit" class="btn btn-primary form-btn">
-  Request a Free Quote
-</button>
+<script src="script.js"></script>
