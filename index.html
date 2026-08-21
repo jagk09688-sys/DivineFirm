@@ -151,7 +151,7 @@
             <p class="eyebrow">Why families choose us</p>
             <h2>Professional care for the spaces that matter most</h2>
             <p>
-              Divine Clean Co. brings a friendly, detail-driven approach to every job. Our
+              Divine Firm brings a friendly, detail-driven approach to every job. Our
               experienced team combines efficient systems, premium products, and a genuine
               commitment to customer care.
             </p>
@@ -262,17 +262,17 @@
             </div>
           </div>
 
-          <form class="quote-form" action="https://formsubmit.co/divinefirm30@gmail.com" method="POST">
+          <form class="quote-form" action="https://formsubmit.co/divinefirm30@gmail.com" method="POST" aria-label="Request a quote form">
             <input type="hidden" name="_subject" value="New enquiry from Divine Firm website">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_honey" style="display:none">
             <label>
               Full name
-              <input type="text" name="name" placeholder="Your name" />
+              <input type="text" name="name" placeholder="Your name" required />
             </label>
             <label>
               Email address
-              <input type="email" name="email" placeholder="you@example.com" />
+              <input type="email" name="email" placeholder="you@example.com" required />
             </label>
             <label>
               Service needed
@@ -282,6 +282,10 @@
                 <option>Deep Cleaning</option>
                 <option>Move-In / Move-Out</option>
               </select>
+            </label>
+            <label>
+              Additional details
+              <textarea name="message" placeholder="Tell us about your space, preferred dates, or special requests" rows="4"></textarea>
             </label>
             <button type="submit" class="btn btn-primary form-btn">Request Quote</button>
           </form>

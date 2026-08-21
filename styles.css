@@ -1,0 +1,60 @@
+/* Basic theme and layout */
+:root{
+  --bg:#ffffff;
+  --primary:#0b88d9;
+  --primary-dark:#066aa8;
+  --muted:#6b7280;
+  --accent:#10b981;
+  --max-width:1100px;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{background:#fff;border-bottom:1px solid #eef2f7}
+.nav-wrap{display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:0.8rem 0}
+.brand{display:flex;align-items:center;text-decoration:none}
+.brand-logo{width:44px;height:44px}
+.brand > span{font-weight:800;color:var(--primary-dark);margin-left:.6rem}
+.main-nav{display:flex;gap:1rem}
+.main-nav a{text-decoration:none;color:var(--muted);padding:.25rem .4rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;text-decoration:none;border:0;cursor:pointer}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark)}
+.btn-secondary{background:transparent;border:1px solid #e6eef6;color:var(--primary-dark)}
+.nav-cta{padding:.45rem .9rem}
+.hero{padding:3rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:start}
+.eyebrow{text-transform:uppercase;color:var(--primary);font-weight:700;margin:0 0 .4rem}
+h1{font-size:2rem;margin:.2rem 0 .6rem}
+.lead{color:var(--muted);max-width:42ch}
+.hero-actions{display:flex;gap:.75rem;margin:1rem 0}
+.hero-points{list-style:none;padding:0;display:flex;gap:1rem;margin:1rem 0 0}
+.hero-card{background:#fff;padding:1.1rem;border-radius:12px;box-shadow:0 6px 20px rgba(11,136,217,0.06)}
+.service-preview{display:flex;gap:.75rem;align-items:center;margin-top:1rem}
+.trust-bar{background:#f8fafc;padding:.6rem 0;border-top:1px solid #eef2f7}
+.trust-grid{display:flex;gap:1.2rem;justify-content:center;color:var(--muted)}
+.section{padding:2.4rem 0}
+.section-heading{margin-bottom:1rem}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.service-card{background:#fff;padding:1rem;border-radius:10px}
+.about-grid{display:grid;grid-template-columns:320px 1fr;gap:1.2rem;align-items:center}
+.image-card{height:200px;background:linear-gradient(135deg,#e6f4ff,#fff);display:flex;align-items:center;justify-content:center;border-radius:10px}
+.steps-grid{display:flex;gap:1rem}
+.review-card{background:#fff;padding:1rem;border-radius:8px}
+.cta-section{background:linear-gradient(180deg,#fff,#fbfdff);padding:2rem;border-top:1px solid #eef2f7}
+.cta-grid{display:grid;grid-template-columns:1fr 420px;gap:1.2rem;align-items:start}
+.contact-details{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
+.quote-form{background:#fff;padding:1rem;border-radius:10px;display:flex;flex-direction:column;gap:.6rem}
+.quote-form label{display:flex;flex-direction:column;font-size:.9rem;color:var(--muted)}
+.quote-form input,.quote-form select,.quote-form textarea{padding:.6rem;border:1px solid #e6eef6;border-radius:8px;margin-top:.35rem}
+.form-btn{width:100%;padding:.8rem}
+.site-footer{border-top:1px solid #eef2f7;padding:1rem 0;color:var(--muted)}
+.footer-wrap{display:flex;justify-content:space-between;align-items:center}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .cta-grid{grid-template-columns:1fr}
+  .main-nav{display:none}
+  .brand > span{display:none}
+}
