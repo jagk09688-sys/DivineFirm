@@ -325,22 +325,23 @@
           <div class="cta-copy">
             <p class="eyebrow">Ready to get started?</p>
             <h2>Let’s create a cleaner, healthier space for you.</h2>
+            <p class="muted">Contact our friendly team for a free, no-obligation quote. We respond within one business day.</p>
             <div class="contact-details">
               <div>
-                <span>Call us</span>
+                <strong>Call</strong>
                 <a href="tel:+61410093694">+61 410 093 694</a>
               </div>
               <div>
-                <span>Email</span>
+                <strong>Email</strong>
                 <a href="mailto:divinefirm30@gmail.com">divinefirm30@gmail.com</a>
               </div>
               <div>
-                <span>Visit us</span>
-                <a href="#contact">24 Borthwick Parade, Clyde North, VIC</a>
+                <strong>Address</strong>
+                <a href="https://www.google.com/maps/search/24+Borthwick+Parade+Clyde+North+VIC" target="_blank" rel="noopener">24 Borthwick Parade, Clyde North, VIC</a>
               </div>
               <div>
-                <span>ABN</span>
-                <a href="#contact">90 701 540 338</a>
+                <strong>ABN</strong>
+                <span>90 701 540 338</span>
               </div>
             </div>
           </div>
@@ -348,29 +349,33 @@
           <form class="quote-form" action="https://formsubmit.co/divinefirm30@gmail.com" method="POST" aria-label="Request a quote form">
             <input type="hidden" name="_subject" value="New enquiry from Divine Firm website">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_honey" style="display:none">
-            <label>
-              Full name
-              <input type="text" name="name" placeholder="Your name" required />
+            <input type="text" name="_honey" class="hp-field" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" tabindex="-1" autocomplete="off">
+
+            <label for="full-name">Full name <span class="required">*</span></label>
+            <input id="full-name" type="text" name="full_name" placeholder="First and last name" required autocomplete="name">
+
+            <label for="email">Email address <span class="required">*</span></label>
+            <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" type="tel" name="phone" placeholder="0410 093 694" autocomplete="tel">
+
+            <fieldset>
+              <legend>Service needed</legend>
+              <label class="checkbox-inline"><input type="checkbox" name="service[]" value="Residential Cleaning"> Residential Cleaning</label>
+              <label class="checkbox-inline"><input type="checkbox" name="service[]" value="Commercial Cleaning"> Commercial Cleaning</label>
+              <label class="checkbox-inline"><input type="checkbox" name="service[]" value="Deep Cleaning"> Deep Cleaning</label>
+              <label class="checkbox-inline"><input type="checkbox" name="service[]" value="Move-In / Move-Out"> Move-In / Move-Out</label>
+            </fieldset>
+
+            <label for="message">Additional details</label>
+            <textarea id="message" name="message" placeholder="Tell us about your space, approximate size, preferred dates, and any special requests" rows="4"></textarea>
+
+            <label class="consent">
+              <input type="checkbox" name="consent" required> I agree to be contacted by Divine Firm about this enquiry.
             </label>
-            <label>
-              Email address
-              <input type="email" name="email" placeholder="you@example.com" required />
-            </label>
-            <label>
-              Service needed
-              <select name="service">
-                <option>Residential Cleaning</option>
-                <option>Commercial Cleaning</option>
-                <option>Deep Cleaning</option>
-                <option>Move-In / Move-Out</option>
-              </select>
-            </label>
-            <label>
-              Additional details
-              <textarea name="message" placeholder="Tell us about your space, preferred dates, or special requests" rows="4"></textarea>
-            </label>
-            <button type="submit" class="btn btn-primary form-btn">Request Quote</button>
+
+            <button type="submit" class="btn btn-primary form-btn">Request a Free Quote</button>
           </form>
         </div>
       </section>
