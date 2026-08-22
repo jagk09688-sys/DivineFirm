@@ -406,33 +406,45 @@
              aria-hidden="true" tabindex="-1" autocomplete="off"
              style="position:absolute;left:-9999px;">
 
-     <!-- Full Name -->
-<div class="form-group">
-  <label for="full-name">Your full name <span class="required">*</span></label>
-  <input id="full-name" type="text" name="full_name"
-         placeholder="Enter your first and last name"
-         required autocomplete="name">
-</div>
+    <!-- Quote Form -->
+<form class="quote-form"
+      action="https://formsubmit.co/divinefirm30@gmail.com"
+      method="POST"
+      aria-label="Request a quote form">
 
-<!-- Email -->
-<div class="form-group">
-  <label for="email">Email address <span class="required">*</span></label>
-  <input id="email" type="email" name="email"
-         placeholder="name@example.com"
-         required autocomplete="email">
-</div>
+  <!-- FormSubmit settings -->
+  <input type="hidden" name="_subject" value="New enquiry from Divine Firm website">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="text" name="_honey" class="hp-field"
+         aria-hidden="true" tabindex="-1" autocomplete="off"
+         style="position:absolute;left:-9999px;">
 
-<!-- Phone -->
-<div class="form-group">
-  <label for="phone">Phone number (optional)</label>
-  <input id="phone" type="tel" name="phone"
-         placeholder="e.g. 0410 093 694"
-         autocomplete="tel">
-</div>
+  <!-- Full Name -->
+  <div class="form-group">
+    <label for="full-name">Your full name <span class="required">*</span></label>
+    <input id="full-name" type="text" name="full_name"
+           placeholder="Enter your first and last name"
+           required autocomplete="name">
+  </div>
 
-<!-- Services -->
-<div class="form-group">
-  <fieldset class="service-options">
+  <!-- Email -->
+  <div class="form-group">
+    <label for="email">Email address <span class="required">*</span></label>
+    <input id="email" type="email" name="email"
+           placeholder="name@example.com"
+           required autocomplete="email">
+  </div>
+
+  <!-- Phone -->
+  <div class="form-group">
+    <label for="phone">Phone number (optional)</label>
+    <input id="phone" type="tel" name="phone"
+           placeholder="e.g. 0410 093 694"
+           autocomplete="tel">
+  </div>
+
+  <!-- Services -->
+  <fieldset class="form-group service-options">
     <legend class="form-legend">Select the service you need</legend>
 
     <div class="checkbox-group">
@@ -457,19 +469,29 @@
       </label>
     </div>
   </fieldset>
-</div>
 
-<!-- Message -->
-<div class="form-group">
-  <label for="message">Tell us about your space</label>
-  <textarea id="message" name="message"
-            placeholder="Include size, number of rooms, preferred dates, and any special requests"
-            rows="4"></textarea>
-</div>
+  <!-- Message -->
+  <div class="form-group">
+    <label for="message">Tell us about your space</label>
+    <textarea id="message" name="message"
+              placeholder="Include size, number of rooms, preferred dates, and any special requests"
+              rows="4"></textarea>
+  </div>
 
-<!-- Consent -->
-<div class="form-group consent-group">
-  <label class="consent">
+  <!-- Consent -->
+  <div class="form-group consent-group">
+    <label class="consent">
+      <input type="checkbox" name="consent" required>
+      <span>I agree to be contacted by Divine Firm regarding my enquiry.</span>
+    </label>
+  </div>
+
+  <!-- Submit -->
+  <button type="submit" class="btn btn-primary form-btn">
+    Request a Free Quote
+  </button>
+</form>
+
     <input type="checkbox" name="consent" required>
     <span>I agree to be contacted by Divine Firm regarding my enquiry.</span>
   </label>
