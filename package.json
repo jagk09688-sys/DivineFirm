@@ -1,0 +1,19 @@
+{
+  "name": "divine-firm",
+  "version": "1.0.0",
+  "description": "DivineFirm website",
+  "main": "convert-svg-to-jpg.js",
+  "scripts": {
+    "convert-svg": "node convert-svg-to-jpg.js"
+  },
+  "keywords": [
+    "svg",
+    "conversion",
+    "jpg"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.33.0"
+  }
+}
