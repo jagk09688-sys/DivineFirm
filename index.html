@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Divine Firm offers reliable residential and commercial cleaning services with eco-friendly products, flexible scheduling, and a satisfaction guarantee." />
-    <title>Divine Firm | Professional Cleaning Services</title>
+    <meta
+      name="description"
+      content="Divine Firm provides reliable housekeeping and residential cleaning with flexible schedules, eco-friendly products, and trusted staff."
+    />
+    <title>Divine Firm | Housekeeping & Home Cleaning</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/favicon.svg" />
     <meta name="application-name" content="Divine Firm" />
@@ -15,73 +18,132 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Mobile-friendly layout tweaks -->
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+      }
+      .container {
+        width: 100%;
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+      }
+      .nav-wrap,
+      .hero-grid,
+      .cta-grid,
+      .about-grid,
+      .services-grid,
+      .steps-grid,
+      .reviews-grid,
+      .pricing-grid {
+        display: grid;
+        gap: 1.5rem;
+      }
+      header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: #ffffff;
+      }
+      .main-nav {
+        display: flex;
+        gap: 1rem;
+      }
+      .menu-toggle {
+        display: none;
+      }
+      @media (max-width: 720px) {
+        .main-nav {
+          display: none;
+        }
+        .menu-toggle {
+          display: inline-flex;
+        }
+        .hero-grid,
+        .cta-grid,
+        .about-grid,
+        .services-grid,
+        .steps-grid,
+        .reviews-grid,
+        .pricing-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-image {
+          order: -1;
+        }
+      }
+    </style>
   </head>
+
   <body>
+    <!-- HEADER -->
     <header class="site-header">
       <div class="container nav-wrap">
-        <a href="#top" class="brand" aria-label="Divine Firm home">
+        <a href="#top" class="brand">
           <picture>
             <source media="(max-width:720px)" srcset="assets/df-mark.svg" />
             <img src="assets/df-wordmark.svg" alt="Divine Firm logo" class="brand-logo" />
           </picture>
         </a>
 
-        <nav class="main-nav" aria-label="Main navigation">
+        <nav class="main-nav">
           <a href="#services">Services</a>
           <a href="#about">About</a>
-          <a href="#process">Process</a>
+          <a href="#housekeeping">Housekeeping Jobs</a>
           <a href="#reviews">Reviews</a>
           <a href="#contact">Contact</a>
         </nav>
 
-        <a href="#contact" class="btn btn-primary nav-cta">Free Quote</a>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
-        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+        <a href="#housekeeping" class="btn btn-primary nav-cta">Housekeeping Jobs</a>
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+        <button class="menu-toggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </header>
 
     <main id="top">
+      <!-- HERO -->
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-content">
-            <p class="eyebrow">Trusted cleaning experts</p>
-            <h1>Spotless spaces. Stress-free living.</h1>
+            <p class="eyebrow">Trusted housekeeping specialists</p>
+            <h1>Comfortable homes. Reliable housekeeping.</h1>
             <p class="lead">
-              We deliver dependable residential and commercial cleaning services that
-              keep your home and workplace fresh, healthy, and beautifully maintained.
+              Divine Firm provides ongoing housekeeping and residential cleaning so your home stays tidy,
+              organised, and welcoming—week after week.
             </p>
+
             <div class="hero-actions">
-              <a href="#contact" class="btn btn-primary">Book a Free Quote</a>
-              <a href="#services" class="btn btn-secondary">Explore Services</a>
+              <a href="#contact" class="btn btn-primary">Book Home Cleaning</a>
+              <a href="#housekeeping" class="btn btn-secondary">View Housekeeping Jobs</a>
             </div>
-            <ul class="hero-points" aria-label="Key advantages">
-              <li>Insured & vetted cleaners</li>
+
+            <ul class="hero-points">
+              <li>Regular housekeeping visits</li>
+              <li>Insured & vetted staff</li>
               <li>Eco-friendly products</li>
-              <li>Flexible booking</li>
             </ul>
           </div>
 
-          <div class="hero-image" role="img" aria-label="Cleaning team at work">
-            <img class="hero-photo" src="https://images.unsplash.com/photo-1533777324565-a040eb52fac0?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Cleaning team at work">
-            <div class="hero-card overlay" aria-label="Customer satisfaction panel">
+          <div class="hero-image">
+            <img
+              class="hero-photo"
+              src="https://images.unsplash.com/photo-1533777324565-a040eb52fac0?q=80&w=1400&auto=format&fit=crop"
+              alt="Housekeeping team at work"
+            />
+            <div class="hero-card overlay">
               <div class="card-pill">4.9/5 Average Rating</div>
-              <div class="mini-stat">
-                <strong>1,200+</strong>
-                <span>Homes cleaned</span>
-              </div>
-              <div class="mini-stat">
-                <strong>96%</strong>
-                <span>Repeat clients</span>
-              </div>
+              <div class="mini-stat"><strong>1,200+</strong><span>Homes serviced</span></div>
+              <div class="mini-stat"><strong>96%</strong><span>Repeat clients</span></div>
               <div class="service-preview">
                 <div class="preview-icon">✓</div>
                 <div>
-                  <h3>Same-week availability</h3>
-                  <p>Fast, friendly service with no hidden fees.</p>
+                  <h3>Weekly & fortnightly visits</h3>
+                  <p>Consistent housekeeping tailored to your routine.</p>
                 </div>
               </div>
             </div>
@@ -89,53 +151,55 @@
         </div>
       </section>
 
+      <!-- PRICING -->
       <section class="pricing section">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Simple pricing</p>
+            <p class="eyebrow">Simple housekeeping pricing</p>
             <h2>Plans to fit every home and schedule</h2>
           </div>
 
           <div class="pricing-grid">
             <article class="price-card">
-              <h3>Basic Clean</h3>
+              <h3>Light Housekeeping</h3>
               <div class="price">$99</div>
-              <p class="muted">Routine home cleaning — kitchens, bathrooms, common areas</p>
+              <p class="muted">Ideal for small homes or apartments.</p>
               <ul>
-                <li>Standard cleaning checklist</li>
-                <li>Eco-friendly products</li>
-                <li>1 cleaner, up to 2 hours</li>
+                <li>General tidy & surface clean</li>
+                <li>Kitchen & bathroom refresh</li>
+                <li>Up to 2 hours</li>
               </ul>
-              <a href="#contact" class="btn btn-primary">Get a Quote</a>
+              <a href="#contact" class="btn btn-primary">Book Now</a>
             </article>
 
             <article class="price-card featured">
-              <h3>Standard</h3>
+              <h3>Standard Housekeeping</h3>
               <div class="price">$169</div>
-              <p class="muted">Most popular — deeper clean with two technicians</p>
+              <p class="muted">Most popular weekly or fortnightly plan.</p>
               <ul>
-                <li>Thorough room-by-room clean</li>
-                <li>2 cleaners, up to 3 hours</li>
-                <li>Priority scheduling</li>
+                <li>Room-by-room clean & tidy</li>
+                <li>Bed making & dusting</li>
+                <li>Up to 3 hours</li>
               </ul>
-              <a href="#contact" class="btn btn-primary">Get a Quote</a>
+              <a href="#contact" class="btn btn-primary">Book Now</a>
             </article>
 
             <article class="price-card">
-              <h3>Premium</h3>
+              <h3>Premium Housekeeping</h3>
               <div class="price">$249</div>
-              <p class="muted">Deep clean and extras — ideal for move-in/out or seasonal cleans</p>
+              <p class="muted">For larger homes or detailed housekeeping needs.</p>
               <ul>
-                <li>Deep clean checklist</li>
-                <li>3 cleaners, up to 4 hours</li>
-                <li>Top-to-bottom attention</li>
+                <li>Deep tidy & detailed clean</li>
+                <li>Extra tasks by arrangement</li>
+                <li>Up to 4 hours</li>
               </ul>
-              <a href="#contact" class="btn btn-primary">Get a Quote</a>
+              <a href="#contact" class="btn btn-primary">Book Now</a>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- TRUST BAR -->
       <section class="trust-bar">
         <div class="container trust-grid">
           <span>HomeAdvisor Approved</span>
@@ -145,354 +209,225 @@
         </div>
       </section>
 
-     <section id="services" class="section">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">What we do</p>
-      <h2>Cleaning services designed around your routine</h2>
-    </div>
+      <!-- SERVICES -->
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">What we do</p>
+            <h2>Housekeeping and home cleaning services</h2>
+          </div>
 
-    <div class="cards-grid services-grid">
+          <div class="cards-grid services-grid">
+            <article class="service-card">
+              <img class="service-photo" src="assets/service-residential.jpg" alt="Residential housekeeping" />
+              <h3>Regular Housekeeping</h3>
+              <p>Weekly or fortnightly visits to keep your home tidy, organised, and clean.</p>
+            </article>
 
-      <!-- Residential Cleaning -->
-      <article class="service-card">
-        <picture>
-          <source type="image/webp"
-            srcset="assets/service-residential-400.webp 400w,
-                    assets/service-residential-800.webp 800w,
-                    assets/service-residential-1200.webp 1200w">
-          <img class="service-photo" src="assets/service-residential.jpg" alt="Residential cleaning service">
-        </picture>
-        <h3>Residential Cleaning</h3>
-        <p>Routine home cleaning for kitchens, bathrooms, bedrooms, and living areas with meticulous attention to detail.</p>
-      </article>
+            <article class="service-card">
+              <img class="service-photo" src="assets/service-deep.jpg" alt="Deep cleaning" />
+              <h3>Deep Home Cleaning</h3>
+              <p>A thorough top-to-bottom clean for seasonal resets and special occasions.</p>
+            </article>
 
-      <!-- Commercial Cleaning -->
-      <article class="service-card">
-        <picture>
-          <source type="image/webp"
-            srcset="assets/service-commercial-400.webp 400w,
-                    assets/service-commercial-800.webp 800w,
-                    assets/service-commercial-1200.webp 1200w">
-          <img class="service-photo" src="assets/service-commercial.jpg" alt="Commercial cleaning service">
-        </picture>
-        <h3>Commercial Cleaning</h3>
-        <p>Professional office and retail cleaning programs tailored to your schedule, footprint, and business needs.</p>
-      </article>
+            <article class="service-card">
+              <img class="service-photo" src="assets/service-move.jpg" alt="Move-in/out cleaning" />
+              <h3>Move-In / Move-Out Cleaning</h3>
+              <p>Detailed cleaning to prepare your home for moving in or handing back keys.</p>
+            </article>
 
-      <!-- Deep Cleaning -->
-      <article class="service-card">
-        <picture>
-          <source type="image/webp"
-            srcset="assets/service-deep-400.webp 400w,
-                    assets/service-deep-800.webp 800w,
-                    assets/service-deep-1200.webp 1200w">
-          <img class="service-photo" src="assets/service-deep.jpg" alt="Deep cleaning service">
-        </picture>
-        <h3>Deep Cleaning</h3>
-        <p>A thorough top-to-bottom clean for seasonal resets, spring refreshes, and special occasions.</p>
-      </article>
+            <article class="service-card">
+              <img class="service-photo" src="assets/service-commercial.jpg" alt="Commercial cleaning" />
+              <h3>Light Commercial Cleaning</h3>
+              <p>Small office and studio cleaning with a housekeeping approach.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-      <!-- Move-In / Move-Out -->
-      <article class="service-card">
-        <picture>
-          <source type="image/webp"
-            srcset="assets/service-move-400.webp 400w,
-                    assets/service-move-800.webp 800w,
-                    assets/service-move-1200.webp 1200w">
-          <img class="service-photo" src="assets/service-move.jpg" alt="Move-in and move-out cleaning service">
-        </picture>
-        <h3>Move-In / Move-Out</h3>
-        <p>Leave your property immaculate for the next chapter with detailed cleaning that helps you move with confidence.</p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
+      <!-- ABOUT -->
       <section id="about" class="section alt-section">
         <div class="container about-grid">
           <div class="about-image">
-            <div class="image-card">
-              <span>Since 2012</span>
-            </div>
+            <div class="image-card"><span>Since 2012</span></div>
           </div>
 
           <div class="about-copy">
             <p class="eyebrow">Why families choose us</p>
-            <h2>Professional care for the spaces that matter most</h2>
+            <h2>Professional housekeeping for the spaces that matter most</h2>
             <p>
-              Divine Firm brings a friendly, detail-driven approach to every job. Our
-              experienced team combines efficient systems, premium products, and a genuine
-              commitment to customer care.
+              Divine Firm brings a friendly, detail-driven approach to every home. Our experienced team combines
+              efficient systems, premium products, and genuine care.
             </p>
             <ul class="feature-list">
-              <li>Background-checked, trained professionals</li>
-              <li>Green, safe cleaning solutions for homes and workplaces</li>
-              <li>Customized cleaning plans and easy scheduling</li>
+              <li>Background-checked housekeepers</li>
+              <li>Green, safe cleaning solutions</li>
+              <li>Custom housekeeping plans</li>
               <li>100% satisfaction guarantee</li>
             </ul>
           </div>
         </div>
       </section>
 
+      <!-- HOUSEKEEPING JOBS -->
+      <section id="housekeeping" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Join our team</p>
+            <h2>Housekeeping jobs in Clyde North & nearby suburbs</h2>
+          </div>
+
+          <div class="cards-grid services-grid">
+            <article class="service-card">
+              <h3>Housekeeper (Casual / Part-time)</h3>
+              <p>We’re hiring reliable, detail-oriented housekeepers for ongoing home cleaning.</p>
+              <ul class="feature-list">
+                <li>Flexible weekly shifts</li>
+                <li>Work across Clyde North & surrounds</li>
+                <li>Training provided</li>
+                <li>Friendly team culture</li>
+              </ul>
+            </article>
+
+            <article class="service-card">
+              <h3>What we look for</h3>
+              <p>You take pride in a clean, organised home and treat clients’ spaces with care.</p>
+              <ul class="feature-list">
+                <li>Strong attention to detail</li>
+                <li>Reliable & punctual</li>
+                <li>Independent worker</li>
+                <li>Experience preferred but not required</li>
+              </ul>
+            </article>
+
+            <article class="service-card">
+              <h3>How to apply</h3>
+              <p>Send your resume or a short introduction to our email. We reply within 1–2 business days.</p>
+              <a href="mailto:admin@divinefirm.online" class="btn btn-primary">Apply for Housekeeping</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
       <section id="process" class="section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">How it works</p>
-            <h2>A simple process from quote to sparkle</h2>
+            <h2>From booking to a beautifully kept home</h2>
           </div>
 
           <div class="steps-grid">
             <div class="step-card">
               <span>01</span>
-              <h3>Request a quote</h3>
-              <p>Tell us about your space, cleaning goals, and preferred schedule.</p>
+              <h3>Get in touch</h3>
+              <p>Call or email us with your home size and preferred days.</p>
             </div>
             <div class="step-card">
               <span>02</span>
-              <h3>We customize the plan</h3>
-              <p>We build a cleaning package that fits your home, team, and budget.</p>
+              <h3>We tailor a plan</h3>
+              <p>We design a housekeeping schedule that fits your routine.</p>
             </div>
             <div class="step-card">
               <span>03</span>
-              <h3>Enjoy the results</h3>
-              <p>Our team arrives on time, works efficiently, and leaves your space refreshed.</p>
+              <h3>Enjoy a tidy home</h3>
+              <p>Our team arrives on time and keeps your home feeling fresh.</p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- REVIEWS -->
       <section id="reviews" class="section alt-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Client feedback</p>
-            <h2>People trust us to keep things looking their best</h2>
+            <h2>Families trust us with their homes</h2>
           </div>
 
           <div class="cards-grid reviews-grid">
             <blockquote class="review-card">
               <p>
-                “Divine Clean Co. transformed our office and gave us a fresh, professional
-                environment for clients and staff. The team is punctual, respectful, and
-                thorough.”
+                “Divine Firm keep our home looking beautiful every week. Reliable, respectful, and very thorough.”
               </p>
-              <footer>
-                <strong>Maria L.</strong>
-                <span>Business Owner</span>
-              </footer>
+              <footer><strong>Emma R.</strong></footer>
             </blockquote>
 
             <blockquote class="review-card">
               <p>
-                “Our home has never looked this good. The cleaners are kind, detail-oriented,
-                and the scheduling is incredibly easy.”
+                “We booked regular housekeeping and it’s been a game changer. The team are kind and professional.”
               </p>
-              <footer>
-                <strong>Jonathan R.</strong>
-                <span>Homeowner</span>
-              </footer>
+              <footer><strong>Jonathan R.</strong></footer>
             </blockquote>
 
             <blockquote class="review-card">
               <p>
-                “We booked a deep clean before moving in, and the results were outstanding.
-                It felt brand new. Highly recommended.”
+                “Their deep clean before we moved in was outstanding. Now we use them for ongoing housekeeping.”
               </p>
-              <footer>
-                <strong>Sophia T.</strong>
-                <span>Tenant</span>
-              </footer>
+              <footer><strong>Sophia T.</strong></footer>
             </blockquote>
           </div>
         </div>
       </section>
 
-     <section id="testimonials" class="section">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">What clients say</p>
-      <h2>Real feedback from recent customers</h2>
-    </div>
+      <!-- CONTACT -->
+      <section id="contact" class="section cta-section">
+        <div class="container cta-grid">
+          <div class="cta-copy">
+            <p class="eyebrow">Ready for a cleaner, calmer home?</p>
+            <h2>Contact Divine Firm</h2>
+            <p class="muted">
+              Reach out to our friendly team to discuss your housekeeping needs. We reply within one business day.
+            </p>
 
-    <div class="testimonials-slider" aria-live="polite">
+            <ul class="contact-list">
+              <li>
+                <span class="contact-label">📞 Call</span>
+                <a href="tel:+61410093694" class="contact-value">+61 410 093 694</a>
+              </li>
 
-      <!-- Testimonial 1 -->
-      <blockquote class="testimonial-card active">
-        <p>“Divine Firm were punctual, thorough and left our home spotless. Highly recommend — great communication and friendly team.”</p>
-        <footer>
-          <strong>Emma R.</strong>
-          <span>Homeowner</span>
-        </footer>
-      </blockquote>
+              <li>
+                <span class="contact-label">✉️ Email</span>
+                <a href="mailto:admin@divinefirm.online" class="contact-value">admin@divinefirm.online</a>
+              </li>
 
-      <!-- Testimonial 2 -->
-      <blockquote class="testimonial-card">
-        <p>“Professional service for our office. The team were discreet, efficient, and the result was excellent.”</p>
-        <footer>
-          <strong>Mark S.</strong>
-          <span>Office Manager</span>
-        </footer>
-      </blockquote>
+              <li>
+                <span class="contact-label">📍 Address</span>
+                <a
+                  href="https://www.google.com/maps/search/24+Borthwick+Parade+Clyde+North+VIC"
+                  target="_blank"
+                  class="contact-value"
+                >
+                  24 Borthwick Parade, Clyde North, VIC
+                </a>
+              </li>
 
-      <!-- Testimonial 3 -->
-      <blockquote class="testimonial-card">
-        <p>“Booked a deep clean before moving out — made the process so much easier. Fantastic attention to detail.”</p>
-        <footer>
-          <strong>Sophia T.</strong>
-          <span>Tenant</span>
-        </footer>
-      </blockquote>
+              <li>
+                <span class="contact-label">🧾 ABN</span>
+                <span class="contact-value">90 701 540 338</span>
+              </li>
+            </ul>
+          </div>
 
-      <!-- Slider Controls -->
-      <div class="slider-controls">
-        <button class="prev" aria-label="Previous testimonial">‹</button>
-        <button class="next" aria-label="Next testimonial">›</button>
-      </div>
-    </div>
-  </div>
-</section>
+          <div class="cta-info-panel">
+            <h3>Housekeeping roles available</h3>
+            <ul class="feature-list">
+              <li>Flexible weekly schedules</li>
+              <li>Residential housekeeping only</li>
+              <li>Training provided</li>
+              <li>Great team culture</li>
+              <li>Competitive pay</li>
+            </ul>
 
+            <p class="muted">
+              To apply, send your resume or a short introduction to our email. We contact shortlisted applicants within
+              1–2 business days.
+            </p>
 
-<!-- CONTACT SECTION -->
-<section id="contact" class="section cta-section">
-  <div class="container cta-grid">
-
-    <!-- Contact Info -->
-    <div class="cta-copy">
-      <p class="eyebrow">Ready to get started?</p>
-      <h2>Let’s create a cleaner, healthier space for you.</h2>
-      <p class="muted">
-        Contact our friendly team for a free, no‑obligation quote — we usually reply within one business day.
-      </p>
-
-      <ul class="contact-list">
-        <li>
-          <span class="contact-label">📞 Call</span>
-          <a href="tel:+61410093694" class="contact-value">+61 410 093 694</a>
-        </li>
-
-        <li>
-          <span class="contact-label">✉️ Email</span>
-          <a href="mailto:divinefirm30@gmail.com" class="contact-value">divinefirm30@gmail.com</a>
-        </li>
-
-        <li>
-          <span class="contact-label">📍 Address</span>
-          <a href="https://www.google.com/maps/search/24+Borthwick+Parade+Clyde+North+VIC"
-             target="_blank" rel="noopener"
-             class="contact-value">
-            24 Borthwick Parade, Clyde North, VIC
-          </a>
-        </li>
-
-        <li>
-          <span class="contact-label">🧾 ABN</span>
-          <span class="contact-value">90 701 540 338</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Quote Form -->
-    <form class="quote-form"
-          action="https://formsubmit.co/divinefirm30@gmail.com"
-          method="POST"
-          aria-label="Request a quote form">
-
-      <!-- FormSubmit settings -->
-      <input type="hidden" name="_subject" value="New enquiry from Divine Firm website">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="_honey" class="hp-field"
-             aria-hidden="true" tabindex="-1" autocomplete="off"
-             style="position:absolute;left:-9999px;">
-
-    <!-- Quote Form -->
-<form class="quote-form"
-      action="https://formsubmit.co/divinefirm30@gmail.com"
-      method="POST"
-      aria-label="Request a quote form">
-
-  <!-- FormSubmit settings -->
-  <input type="hidden" name="_subject" value="New enquiry from Divine Firm website">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="text" name="_honey" class="hp-field"
-         aria-hidden="true" tabindex="-1" autocomplete="off"
-         style="position:absolute;left:-9999px;">
-
-  <!-- Full Name -->
-  <div class="form-group">
-    <label for="full-name">Your full name <span class="required">*</span></label>
-    <input id="full-name" type="text" name="full_name"
-           placeholder="Enter your first and last name"
-           required autocomplete="name">
-  </div>
-
-  <!-- Email -->
-  <div class="form-group">
-    <label for="email">Email address <span class="required">*</span></label>
-    <input id="email" type="email" name="email"
-           placeholder="name@example.com"
-           required autocomplete="email">
-  </div>
-
-  <!-- Phone -->
-  <div class="form-group">
-    <label for="phone">Phone number (optional)</label>
-    <input id="phone" type="tel" name="phone"
-           placeholder="e.g. 0410 093 694"
-           autocomplete="tel">
-  </div>
-
-  <!-- Services -->
-  <fieldset class="form-group service-options">
-    <legend class="form-legend">Select the service you need</legend>
-
-    <div class="checkbox-group">
-      <label class="checkbox-item">
-        <input type="checkbox" name="service[]" value="Residential Cleaning">
-        <span>Residential cleaning</span>
-      </label>
-
-      <label class="checkbox-item">
-        <input type="checkbox" name="service[]" value="Commercial Cleaning">
-        <span>Commercial cleaning</span>
-      </label>
-
-      <label class="checkbox-item">
-        <input type="checkbox" name="service[]" value="Deep Cleaning">
-        <span>Deep cleaning</span>
-      </label>
-
-      <label class="checkbox-item">
-        <input type="checkbox" name="service[]" value="Move-In / Move-Out">
-        <span>Move‑in / Move‑out cleaning</span>
-      </label>
-    </div>
-  </fieldset>
-
-  <!-- Message -->
-  <div class="form-group">
-    <label for="message">Tell us about your space</label>
-    <textarea id="message" name="message"
-              placeholder="Include size, number of rooms, preferred dates, and any special requests"
-              rows="4"></textarea>
-  </div>
-
-  <!-- Consent -->
-  <div class="form-group consent-group">
-    <label class="consent">
-      <input type="checkbox" name="consent" required>
-      <span>I agree to be contacted by Divine Firm regarding my enquiry.</span>
-    </label>
-  </div>
-
-  <!-- Submit -->
-  <button type="submit" class="btn btn-primary form-btn">
-    Request a Free Quote
-  </button>
-</form>
-
-    <input type="checkbox" name="consent" required>
-    <span>I agree to be contacted by Divine Firm regarding my enquiry.</span>
-  </label>
-</div>
+            <a href="mailto:admin@divinefirm.online" class="btn btn-primary">Apply for Housekeeping</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
