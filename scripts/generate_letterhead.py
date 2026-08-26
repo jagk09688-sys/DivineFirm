@@ -4,8 +4,8 @@ from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 
 # Config: update these values if you have the real ABN/address
 COMPANY_NAME = "DF Divine Firm"
-ABN = "ABN: [insert ABN]"
-ADDRESS = "123 Example Street, Suburb, State, Postcode"
+ABN = "ABN: 90701540338"
+ADDRESS = "24 Borthwick Parade, Clyde North"
 EMAIL = "divinefirm30@gmail.com"
 PHONE = ""
 WEBSITE = "www.divinefirm.online"
