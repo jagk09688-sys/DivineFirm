@@ -7,6 +7,17 @@
       name="description"
       content="Divine Firm provides reliable housekeeping and residential cleaning with flexible schedules, eco-friendly products, and trusted staff."
     />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0d8f7b" />
+    <meta property="og:title" content="Divine Firm | Housekeeping & Home Cleaning" />
+    <meta
+      property="og:description"
+      content="Professional housekeeping and residential cleaning in Clyde North and nearby suburbs. Trusted, eco-friendly, and reliable."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://divinefirm.online/assets/df-wordmark.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://divinefirm.online/" />
     <title>Divine Firm | Housekeeping & Home Cleaning</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/favicon.svg" />
@@ -82,11 +93,8 @@
     <!-- HEADER -->
     <header class="site-header">
       <div class="container nav-wrap">
-        <a href="#top" class="brand">
-          <picture>
-            <source media="(max-width:720px)" srcset="assets/df-mark.svg" />
-            <img src="assets/df-wordmark.svg" alt="Divine Firm logo" class="brand-logo" />
-          </picture>
+        <a href="#top" class="brand" aria-label="Divine Firm home">
+          <img src="assets/df-mark.svg" alt="Divine Firm logo" class="brand-logo brand-mark" />
         </a>
 
         <nav class="main-nav">
@@ -98,7 +106,6 @@
         </nav>
 
         <a href="#housekeeping" class="btn btn-primary nav-cta">Housekeeping Jobs</a>
-        <button id="theme-toggle" class="theme-toggle">🌙</button>
         <button class="menu-toggle" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
@@ -120,6 +127,23 @@
             <div class="hero-actions">
               <a href="#contact" class="btn btn-primary">Book Home Cleaning</a>
               <a href="#housekeeping" class="btn btn-secondary">View Housekeeping Jobs</a>
+            </div>
+
+            <div class="hero-meta" aria-label="Customer trust metrics">
+              <div class="meta-badge">
+                <div class="meta-icon">★</div>
+                <div class="meta-copy">
+                  <strong>4.9/5</strong>
+                  <span>Average rating</span>
+                </div>
+              </div>
+              <div class="meta-badge">
+                <div class="meta-icon">✓</div>
+                <div class="meta-copy">
+                  <strong>1,200+</strong>
+                  <span>Homes looked after</span>
+                </div>
+              </div>
             </div>
 
             <ul class="hero-points">
@@ -219,25 +243,45 @@
 
           <div class="cards-grid services-grid">
             <article class="service-card">
-              <img class="service-photo" src="assets/service-residential.jpg" alt="Residential housekeeping" />
+              <img
+                class="service-photo"
+                src="assets/service-residential-800.webp"
+                alt="Residential housekeeping"
+                onerror="this.onerror=null;this.src='assets/service-residential.jpg'"
+              />
               <h3>Regular Housekeeping</h3>
               <p>Weekly or fortnightly visits to keep your home tidy, organised, and clean.</p>
             </article>
 
             <article class="service-card">
-              <img class="service-photo" src="assets/service-deep.jpg" alt="Deep cleaning" />
+              <img
+                class="service-photo"
+                src="assets/service-deep-800.webp"
+                alt="Deep cleaning"
+                onerror="this.onerror=null;this.src='assets/service-deep.jpg'"
+              />
               <h3>Deep Home Cleaning</h3>
               <p>A thorough top-to-bottom clean for seasonal resets and special occasions.</p>
             </article>
 
             <article class="service-card">
-              <img class="service-photo" src="assets/service-move.jpg" alt="Move-in/out cleaning" />
+              <img
+                class="service-photo"
+                src="assets/service-move-800.webp"
+                alt="Move-in/out cleaning"
+                onerror="this.onerror=null;this.src='assets/service-move.jpg'"
+              />
               <h3>Move-In / Move-Out Cleaning</h3>
               <p>Detailed cleaning to prepare your home for moving in or handing back keys.</p>
             </article>
 
             <article class="service-card">
-              <img class="service-photo" src="assets/service-commercial.jpg" alt="Commercial cleaning" />
+              <img
+                class="service-photo"
+                src="assets/service-commercial-800.webp"
+                alt="Commercial cleaning"
+                onerror="this.onerror=null;this.src='assets/service-commercial.jpg'"
+              />
               <h3>Light Commercial Cleaning</h3>
               <p>Small office and studio cleaning with a housekeeping approach.</p>
             </article>
@@ -370,12 +414,96 @@
         </div>
       </section>
 
+      <!-- TESTIMONIALS SLIDER -->
+      <section id="testimonials" class="section alt-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Love from our clients</p>
+            <h2>Families trust Divine Firm with their homes</h2>
+            <p style="color: var(--muted); max-width: 60ch;">See why 1,200+ happy households have made us their go-to housekeeping partner.</p>
+          </div>
+
+          <div class="testimonials-slider">
+            <article class="testimonial-card active">
+              <div class="rating">★★★★★</div>
+              <p>"Divine Firm keep our home looking beautiful every week. Reliable, respectful, and very thorough. The team genuinely cares about the quality of their work."</p>
+              <footer><strong>Emma R.</strong> • Clyde North</footer>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="rating">★★★★★</div>
+              <p>"We booked regular housekeeping and it's been a game changer. The team are kind and professional. Our home has never looked better!"</p>
+              <footer><strong>Jonathan R.</strong> • Dandenong</footer>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="rating">★★★★★</div>
+              <p>"Their deep clean before we moved in was outstanding. Now we use them for ongoing housekeeping. Absolutely worth every penny."</p>
+              <footer><strong>Sophia T.</strong> • Fountain Gate</footer>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="rating">★★★★★</div>
+              <p>"I was nervous about letting someone clean, but Divine Firm's team put me at ease immediately. Professional, trustworthy, and detail-oriented."</p>
+              <footer><strong>Michael K.</strong> • Cranbourne</footer>
+            </article>
+          </div>
+
+          <div class="slider-controls">
+            <button class="prev" aria-label="Previous testimonial">‹</button>
+            <button class="next" aria-label="Next testimonial">›</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ SECTION -->
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Common questions</p>
+            <h2>Frequently asked questions</h2>
+          </div>
+
+          <div class="faq-grid">
+            <details class="faq-item">
+              <summary>How do I book a housekeeping appointment?</summary>
+              <p>Simply call us on <a href="tel:+61410093694">+61 410 093 694</a> or email <a href="mailto:admin@divinefirm.online">admin@divinefirm.online</a> with your home size and preferred schedule. We'll create a tailored plan and confirm your first visit within 1-2 business days.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>What areas do you service?</summary>
+              <p>We provide housekeeping services throughout Clyde North and nearby suburbs including Dandenong, Fountain Gate, Cranbourne, and surrounding areas. Contact us to confirm your specific location.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Are your cleaners background checked?</summary>
+              <p>Yes, absolutely. All our housekeeping staff are fully background checked, insured, and vetted. Your home's security and safety is our top priority.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>What products do you use?</summary>
+              <p>We use eco-friendly, non-toxic cleaning products that are safe for your family and pets. If you have specific product preferences or allergies, let us know and we'll accommodate them.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can I change my housekeeping schedule?</summary>
+              <p>Absolutely! You can adjust your schedule anytime—weekly, fortnightly, or monthly visits. Just let us know and we'll adapt your plan to fit your lifestyle.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>What's your cancellation policy?</summary>
+              <p>We ask for 48 hours' notice for cancellations. Emergency cancellations can be arranged—just call us directly. Rescheduling is always free of charge.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <!-- CONTACT -->
       <section id="contact" class="section cta-section">
         <div class="container cta-grid">
           <div class="cta-copy">
             <p class="eyebrow">Ready for a cleaner, calmer home?</p>
-            <h2>Contact Divine Firm</h2>
+            <h2>Contact Divine Firm Today</h2>
             <p class="muted">
               Reach out to our friendly team to discuss your housekeeping needs. We reply within one business day.
             </p>
@@ -429,5 +557,64 @@
         </div>
       </section>
     </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div class="footer-col">
+          <a href="#top" class="brand">
+            <img src="assets/df-mark.svg" alt="Divine Firm logo" style="width: 40px; height: auto;" />
+          </a>
+          <p class="muted" style="font-size: 0.9rem; margin-top: 0.5rem;">Professional housekeeping for homes that matter.</p>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <p class="muted" style="font-size: 0.9rem;">ABN: 90 701 540 338</p>
+          <a href="tel:+61410093694" style="color: var(--primary); text-decoration: none; font-weight: 600;">+61 410 093 694</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Divine Firm Pty Ltd. All rights reserved. • <a href="#">Privacy Policy</a></p>
+      </div>
+    </footer>
+
+    <!-- JSON-LD Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Divine Firm",
+      "image": "https://divinefirm.online/assets/df-wordmark.svg",
+      "description": "Professional housekeeping and residential cleaning services in Clyde North and nearby suburbs",
+      "url": "https://divinefirm.online",
+      "telephone": "+61410093694",
+      "email": "admin@divinefirm.online",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "24 Borthwick Parade",
+        "addressLocality": "Clyde North",
+        "addressRegion": "VIC",
+        "postalCode": "3978",
+        "addressCountry": "AU"
+      },
+      "priceRange": "$$",
+      "areaServed": ["Clyde North", "Dandenong", "Fountain Gate", "Cranbourne"],
+      "serviceType": "Housekeeping",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1200"
+      }
+    }
+    </script>
   </body>
 </html>

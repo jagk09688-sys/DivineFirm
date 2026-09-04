@@ -2,12 +2,12 @@
 <svg width="300" height="64" viewBox="0 0 300 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Divine Firm wordmark">
   <defs>
     <style>
-      .wf{font-family:Inter, Arial, Helvetica, sans-serif; font-weight:800; fill:#04392f}
+      .wf{font-family:Inter, Arial, Helvetica, sans-serif; font-weight:800; fill:#1d3b1f}
     </style>
   </defs>
   <g transform="translate(0,0)">
-    <rect x="0" y="0" width="56" height="56" rx="10" fill="#0ba987" />
-    <text x="28" y="36" text-anchor="middle" dominant-baseline="central" font-size="28" fill="#ffffff" font-weight="800">DF</text>
+    <rect x="0" y="0" width="56" height="56" rx="10" fill="#4CAF50" />
+    <text x="28" y="36" text-anchor="middle" dominant-baseline="central" font-size="28" fill="#F7C948" font-weight="800">DF</text>
     <text x="86" y="34" class="wf" font-size="20">Divine Firm</text>
   </g>
 </svg>

@@ -48,19 +48,4 @@ document.addEventListener('DOMContentLoaded', function(){
   const mqShow = ()=>{ if(window.innerWidth < 480) quick.style.display='flex'; else quick.style.display='none'; }
   mqShow(); window.addEventListener('resize', mqShow);
 
-  // Theme toggle (light / dark)
-  const themeToggle = document.getElementById('theme-toggle');
-  const rootEl = document.documentElement;
-  const stored = localStorage.getItem('df-theme');
-  if(stored === 'dark') rootEl.classList.add('theme-dark');
-  const updateToggle = ()=>{ if(rootEl.classList.contains('theme-dark')) themeToggle.textContent='☀️'; else themeToggle.textContent='🌙'; }
-  if(themeToggle){
-    updateToggle();
-    themeToggle.addEventListener('click', ()=>{
-      rootEl.classList.toggle('theme-dark');
-      const nowDark = rootEl.classList.contains('theme-dark');
-      localStorage.setItem('df-theme', nowDark ? 'dark' : 'light');
-      updateToggle();
-    })
-  }
 });
