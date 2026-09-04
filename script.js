@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+function initializeSite() {
   const btn = document.querySelector('.menu-toggle');
   const header = document.querySelector('.site-header');
   const navLinks = document.querySelectorAll('.main-nav a');
@@ -40,4 +40,10 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   }
 
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeSite);
+} else {
+  initializeSite();
+}

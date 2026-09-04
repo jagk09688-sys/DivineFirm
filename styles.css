@@ -148,6 +148,8 @@ textarea {
   background: transparent;
   border: 0;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 .menu-toggle {
@@ -891,7 +893,7 @@ h2 {
     border-radius: 16px;
     padding: 1rem;
     box-shadow: var(--shadow);
-    z-index: 140;
+    z-index: 3;
   }
 
   .site-header.nav-open::after {
@@ -899,7 +901,8 @@ h2 {
     position: fixed;
     inset: 0;
     background: rgba(17, 24, 39, 0.2);
-    z-index: 130;
+    z-index: 1;
+    pointer-events: none;
   }
 
   .testimonials-slider {
