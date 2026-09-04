@@ -709,14 +709,11 @@ h2 {
 
 .testimonials-slider {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
-  min-height: 220px;
+  min-height: 0;
 }
 
 .testimonial-card {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   padding: 1.2rem;
@@ -727,6 +724,7 @@ h2 {
 }
 
 .testimonial-card.active {
+  display: flex;
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
