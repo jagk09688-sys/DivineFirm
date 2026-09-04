@@ -6,13 +6,17 @@ function initializeSite() {
   btn.addEventListener('click', function(){
     const expanded = this.getAttribute('aria-expanded') === 'true';
     this.setAttribute('aria-expanded', String(!expanded));
+    this.setAttribute('aria-label', expanded ? 'Open menu' : 'Close menu');
     header.classList.toggle('nav-open');
   });
   navLinks.forEach(link=>{
     link.addEventListener('click', ()=>{
       header.classList.remove('nav-open');
       const mt = document.querySelector('.menu-toggle');
-      if(mt) mt.setAttribute('aria-expanded','false');
+      if(mt) {
+        mt.setAttribute('aria-expanded','false');
+        mt.setAttribute('aria-label','Open menu');
+      }
     })
   })
 
