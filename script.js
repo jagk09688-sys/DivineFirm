@@ -40,12 +40,4 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   }
 
-  // Mobile quick action show/hide
-  const quick = document.createElement('div');
-  quick.className = 'quick-action';
-  quick.innerHTML = '<a href="#contact">Get a Free Quote</a><small>Call +61 410 093 694</small>';
-  document.body.appendChild(quick);
-  const mqShow = ()=>{ if(window.innerWidth < 480) quick.style.display='flex'; else quick.style.display='none'; }
-  mqShow(); window.addEventListener('resize', mqShow);
-
 });

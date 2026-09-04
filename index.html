@@ -31,62 +31,6 @@
     <link rel="stylesheet" href="styles.css" />
 
     <!-- Mobile-friendly layout tweaks -->
-    <style>
-      body {
-        margin: 0;
-        font-family: "Inter", sans-serif;
-      }
-      .container {
-        width: 100%;
-        max-width: 1120px;
-        margin: 0 auto;
-        padding: 0 1.25rem;
-      }
-      .nav-wrap,
-      .hero-grid,
-      .cta-grid,
-      .about-grid,
-      .services-grid,
-      .steps-grid,
-      .reviews-grid,
-      .pricing-grid {
-        display: grid;
-        gap: 1.5rem;
-      }
-      header.site-header {
-        position: sticky;
-        top: 0;
-        z-index: 20;
-        background: #ffffff;
-      }
-      .main-nav {
-        display: flex;
-        gap: 1rem;
-      }
-      .menu-toggle {
-        display: none;
-      }
-      @media (max-width: 720px) {
-        .main-nav {
-          display: none;
-        }
-        .menu-toggle {
-          display: inline-flex;
-        }
-        .hero-grid,
-        .cta-grid,
-        .about-grid,
-        .services-grid,
-        .steps-grid,
-        .reviews-grid,
-        .pricing-grid {
-          grid-template-columns: 1fr;
-        }
-        .hero-image {
-          order: -1;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -94,10 +38,10 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a href="#top" class="brand" aria-label="Divine Firm home">
-          <img src="assets/df-mark.svg" alt="Divine Firm logo" class="brand-logo brand-mark" />
+          <img src="assets/df-wordmark.svg" alt="Divine Firm logo" class="brand-logo" />
         </a>
 
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Main navigation">
           <a href="#services">Services</a>
           <a href="#about">About</a>
           <a href="#housekeeping">Housekeeping Jobs</a>
@@ -106,7 +50,7 @@
         </nav>
 
         <a href="#housekeeping" class="btn btn-primary nav-cta">Housekeeping Jobs</a>
-        <button class="menu-toggle" aria-label="Open menu">
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -156,7 +100,8 @@
           <div class="hero-image">
             <img
               class="hero-photo"
-              src="https://images.unsplash.com/photo-1533777324565-a040eb52fac0?q=80&w=1400&auto=format&fit=crop"
+              src="assets/service-residential-1200.webp"
+              onerror="this.onerror=null;this.src='assets/service-residential.jpg'"
               alt="Housekeeping team at work"
             />
             <div class="hero-card overlay">
@@ -563,9 +508,9 @@
       <div class="container footer-wrap">
         <div class="footer-col">
           <a href="#top" class="brand">
-            <img src="assets/df-mark.svg" alt="Divine Firm logo" style="width: 40px; height: auto;" />
+            <img src="assets/df-wordmark.svg" alt="Divine Firm logo" class="footer-logo" />
           </a>
-          <p class="muted" style="font-size: 0.9rem; margin-top: 0.5rem;">Professional housekeeping for homes that matter.</p>
+          <p class="muted">Professional housekeeping for homes that matter.</p>
         </div>
 
         <nav class="footer-nav">
@@ -577,7 +522,7 @@
 
         <div class="footer-col">
           <h4>Connect</h4>
-          <p class="muted" style="font-size: 0.9rem;">ABN: 90 701 540 338</p>
+          <p class="muted">ABN: 90 701 540 338</p>
           <a href="tel:+61410093694" style="color: var(--primary); text-decoration: none; font-weight: 600;">+61 410 093 694</a>
         </div>
       </div>
