@@ -60,6 +60,7 @@ async function getWorkItems() {
   if (!supabaseClient) return [];
   const { data, error } = await supabaseClient.storage.from(WORK_BUCKET).list('', {
     limit: 100,
+    prefix: '',
     sortBy: { column: 'created_at', order: 'desc' }
   });
   if (error) return [];
