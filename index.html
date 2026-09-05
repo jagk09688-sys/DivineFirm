@@ -44,6 +44,7 @@
         <nav class="main-nav" aria-label="Main navigation">
           <a href="#services">Services</a>
           <a href="#about">About</a>
+          <a href="#work">Our Work</a>
           <a href="#reviews">Reviews</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -73,13 +74,6 @@
 
             <div class="hero-meta" aria-label="Customer trust metrics">
               <div class="meta-badge">
-                <div class="meta-icon">★</div>
-                <div class="meta-copy">
-                  <strong>4.9/5</strong>
-                  <span>Average rating</span>
-                </div>
-              </div>
-              <div class="meta-badge">
                 <div class="meta-icon">✓</div>
                 <div class="meta-copy">
                   <strong>1,200+</strong>
@@ -103,7 +97,6 @@
               alt="Housekeeping team at work"
             />
             <div class="hero-card overlay">
-              <div class="card-pill">4.9/5 Average Rating</div>
               <div class="mini-stat"><strong>1,200+</strong><span>Homes serviced</span></div>
               <div class="mini-stat"><strong>96%</strong><span>Repeat clients</span></div>
               <div class="service-preview">
@@ -127,38 +120,38 @@
           </div>
 
           <div class="pricing-grid">
-            <article class="price-card">
-              <h3>Light Housekeeping</h3>
-              <div class="price">$99</div>
-              <p class="muted">Ideal for small homes or apartments.</p>
+            <article class="price-card featured">
+              <h3>Housekeeping</h3>
+              <div class="price">$180</div>
+              <p class="muted">For 2–3 bedroom homes with 2 bathrooms.</p>
               <ul>
-                <li>General tidy & surface clean</li>
-                <li>Kitchen & bathroom refresh</li>
-                <li>Up to 2 hours</li>
+                <li>Guest-ready room reset</li>
+                <li>Two-bathroom clean</li>
+                <li>Kitchen and common areas</li>
               </ul>
               <a href="#contact" class="btn btn-primary">Book Now</a>
             </article>
 
             <article class="price-card featured">
-              <h3>Standard Housekeeping</h3>
-              <div class="price">$169</div>
-              <p class="muted">Most popular weekly or fortnightly plan.</p>
+              <h3>Housekeeping</h3>
+              <div class="price">$200</div>
+              <p class="muted">For 3–4 bedroom homes with 3 bathrooms.</p>
               <ul>
-                <li>Room-by-room clean & tidy</li>
-                <li>Bed making & dusting</li>
-                <li>Up to 3 hours</li>
+                <li>Guest-ready room reset</li>
+                <li>Three-bathroom clean</li>
+                <li>Kitchen and common areas</li>
               </ul>
               <a href="#contact" class="btn btn-primary">Book Now</a>
             </article>
 
-            <article class="price-card">
-              <h3>Premium Housekeeping</h3>
-              <div class="price">$249</div>
-              <p class="muted">For larger homes or detailed housekeeping needs.</p>
+            <article class="price-card featured">
+              <h3>Housekeeping</h3>
+              <div class="price">$250</div>
+              <p class="muted">For 4–5 bedroom homes with 4 bathrooms.</p>
               <ul>
-                <li>Deep tidy & detailed clean</li>
-                <li>Extra tasks by arrangement</li>
-                <li>Up to 4 hours</li>
+                <li>Guest-ready room reset</li>
+                <li>Four-bathroom clean</li>
+                <li>Kitchen and common areas</li>
               </ul>
               <a href="#contact" class="btn btn-primary">Book Now</a>
             </article>
@@ -252,6 +245,23 @@
               <li>Custom housekeeping plans</li>
               <li>100% satisfaction guarantee</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BEFORE AND AFTER -->
+      <section id="work" class="section work-section">
+        <div class="container">
+          <div class="section-heading work-heading">
+            <div>
+              <p class="eyebrow">Our recent work</p>
+              <h2>Before and after</h2>
+            </div>
+            <p class="muted">See the difference a detailed Divine Firm clean makes.</p>
+          </div>
+
+          <div id="work-gallery" class="work-gallery" aria-live="polite">
+            <p class="work-empty">Our latest cleaning transformations will appear here soon.</p>
           </div>
         </div>
       </section>
@@ -442,6 +452,50 @@
 
         </div>
       </section>
+
+      <!-- DIRECTOR WORKSPACE: available only at ?admin=1 -->
+      <section id="director-workspace" class="section director-section" hidden>
+        <div class="container director-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Private workspace</p>
+            <h2>Director photo manager</h2>
+            <p class="muted">Add paired before-and-after photos for the customer gallery.</p>
+          </div>
+
+          <div id="director-login" class="director-panel">
+            <form id="director-login-form" class="director-form">
+              <label for="director-code">Director access code</label>
+              <input id="director-code" name="director-code" type="password" autocomplete="current-password" required />
+              <button type="submit" class="btn btn-primary">Sign in</button>
+              <p id="director-login-status" class="form-status" role="status"></p>
+            </form>
+          </div>
+
+          <div id="director-manager" class="director-panel" hidden>
+            <form id="work-upload-form" class="director-form">
+              <label for="work-title">Work title</label>
+              <input id="work-title" name="work-title" type="text" placeholder="Airbnb kitchen refresh" required />
+
+              <div class="upload-grid">
+                <label class="upload-field" for="before-photo">
+                  Before photo
+                  <input id="before-photo" name="before-photo" type="file" accept="image/*" required />
+                </label>
+                <label class="upload-field" for="after-photo">
+                  After photo
+                  <input id="after-photo" name="after-photo" type="file" accept="image/*" required />
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Add to gallery</button>
+              <button id="director-signout" type="button" class="btn btn-secondary">Sign out</button>
+              <p id="work-upload-status" class="form-status" role="status"></p>
+            </form>
+            <div id="director-items" class="director-items"></div>
+            <p class="director-note">Static-site note: uploads are saved in this browser only. Shared secure uploads require a server or CMS.</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
@@ -457,8 +511,10 @@
         <nav class="footer-nav">
           <a href="#services">Services</a>
           <a href="#about">About</a>
+          <a href="#work">Our Work</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
+          <a href="?admin=1">Director sign-in</a>
         </nav>
 
       </div>
@@ -489,12 +545,7 @@
       },
       "priceRange": "$$",
       "areaServed": ["Clyde North", "Dandenong", "Fountain Gate", "Cranbourne"],
-      "serviceType": "Housekeeping",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "1200"
-      }
+      "serviceType": "Housekeeping"
     }
     </script>
 
