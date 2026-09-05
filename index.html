@@ -464,8 +464,10 @@
 
           <div id="director-login" class="director-panel">
             <form id="director-login-form" class="director-form">
-              <label for="director-code">Director access code</label>
-              <input id="director-code" name="director-code" type="password" autocomplete="current-password" required />
+              <label for="director-email">Director email</label>
+              <input id="director-email" name="director-email" type="email" autocomplete="username" required />
+              <label for="director-password">Password</label>
+              <input id="director-password" name="director-password" type="password" autocomplete="current-password" required />
               <button type="submit" class="btn btn-primary">Sign in</button>
               <p id="director-login-status" class="form-status" role="status"></p>
             </form>
@@ -549,6 +551,7 @@
     }
     </script>
 
-    <script src="script.js?v=4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js?v=5"></script>
   </body>
 </html>

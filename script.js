@@ -49,23 +49,41 @@ function initializeSite() {
 
 }
 
-const WORK_STORAGE_KEY = 'divineFirmWorkGallery';
-const DIRECTOR_ACCESS_CODE = 'DF-director-2026';
+const SUPABASE_URL = 'https://bguzkzwispgvgcctwepc.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_xKW8U3VVo3iDGoaidI0hBQ_RTYK4H9M';
+const WORK_BUCKET = 'work-photos';
+const supabaseClient = window.supabase
+  ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY)
+  : null;
 
-function getWorkItems() {
-  try {
-    return JSON.parse(localStorage.getItem(WORK_STORAGE_KEY) || '[]');
-  } catch (error) {
-    return [];
-  }
+async function getWorkItems() {
+  if (!supabaseClient) return [];
+  const { data, error } = await supabaseClient.storage.from(WORK_BUCKET).list('', {
+    limit: 100,
+    sortBy: { column: 'created_at', order: 'desc' }
+  });
+  if (error) return [];
+
+  const files = data.filter(file => file.name && file.name.includes('__before.'));
+  return files.map(beforeFile => {
+    const baseName = beforeFile.name.replace(/__before\.[^.]+$/, '');
+    const afterFile = data.find(file => file.name.startsWith(`${baseName}__after.`));
+    if (!afterFile) return null;
+    const before = supabaseClient.storage.from(WORK_BUCKET).getPublicUrl(beforeFile.name).data.publicUrl;
+    const after = supabaseClient.storage.from(WORK_BUCKET).getPublicUrl(afterFile.name).data.publicUrl;
+    return { title: baseName.replace(/^[^_]+_/, '').replace(/-/g, ' '), before, after, beforeName: beforeFile.name, afterName: afterFile.name };
+  }).filter(Boolean);
 }
 
-function initializeWorkGallery() {
+async function initializeWorkGallery() {
   const gallery = document.querySelector('#work-gallery');
   if (!gallery) return;
 
-  const items = getWorkItems();
-  if (!items.length) return;
+  const items = await getWorkItems();
+  if (!items.length) {
+    gallery.innerHTML = '<p class="work-empty">Our latest cleaning transformations will appear here soon.</p>';
+    return;
+  }
 
   gallery.innerHTML = items.map(item => `
     <article class="work-card">
@@ -94,8 +112,8 @@ function initializeDirectorWorkspace() {
   const signout = document.querySelector('#director-signout');
   if (!login || !manager || !loginPanel || !uploadForm || !itemsContainer || !signout) return;
 
-  const renderItems = () => {
-    const items = getWorkItems();
+  const renderItems = async () => {
+    const items = await getWorkItems();
     itemsContainer.innerHTML = items.length
       ? items.map((item, index) => `<div class="director-item"><span>${item.title}</span><button type="button" data-remove-work="${index}">Remove</button></div>`).join('')
       : '<p class="muted">No work photos uploaded yet.</p>';
@@ -109,17 +127,14 @@ function initializeDirectorWorkspace() {
 
   login.addEventListener('submit', event => {
     event.preventDefault();
-    const code = new FormData(login).get('director-code');
-    if (code === DIRECTOR_ACCESS_CODE) {
-      sessionStorage.setItem('divineFirmDirector', 'true');
-      showManager();
-      loginStatus.textContent = '';
-    } else {
-      loginStatus.textContent = 'That access code is not recognised.';
-    }
+    signInDirector(new FormData(login), loginStatus, showManager);
   });
 
-  if (sessionStorage.getItem('divineFirmDirector') === 'true') showManager();
+  if (supabaseClient) {
+    supabaseClient.auth.getSession().then(({ data }) => {
+      if (data.session) showManager();
+    });
+  }
 
   uploadForm.addEventListener('submit', async event => {
     event.preventDefault();
@@ -127,48 +142,59 @@ function initializeDirectorWorkspace() {
     const afterFile = document.querySelector('#after-photo').files[0];
     if (!beforeFile || !afterFile) return;
     uploadStatus.textContent = 'Preparing photos...';
-    const [before, after] = await Promise.all([readImage(beforeFile), readImage(afterFile)]);
-    const items = getWorkItems();
-    items.unshift({
-      title: document.querySelector('#work-title').value.trim(),
-      before,
-      after
-    });
-    try {
-      localStorage.setItem(WORK_STORAGE_KEY, JSON.stringify(items));
-      uploadForm.reset();
-      uploadStatus.textContent = 'Added to this browser’s customer gallery.';
-      renderItems();
-      initializeWorkGallery();
-    } catch (error) {
-      uploadStatus.textContent = 'The photos are too large for browser storage. Resize them and try again.';
+    const title = document.querySelector('#work-title').value.trim();
+    const id = `${Date.now()}_${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+    const beforePath = `${id}__before.${getExtension(beforeFile)}`;
+    const afterPath = `${id}__after.${getExtension(afterFile)}`;
+    const beforeResult = await supabaseClient.storage.from(WORK_BUCKET).upload(beforePath, beforeFile, { upsert: false });
+    const afterResult = await supabaseClient.storage.from(WORK_BUCKET).upload(afterPath, afterFile, { upsert: false });
+    if (beforeResult.error || afterResult.error) {
+      uploadStatus.textContent = beforeResult.error?.message || afterResult.error?.message || 'Upload failed.';
+      return;
     }
+      uploadForm.reset();
+      uploadStatus.textContent = 'Published to the customer gallery.';
+      await renderItems();
+      await initializeWorkGallery();
   });
 
-  itemsContainer.addEventListener('click', event => {
+  itemsContainer.addEventListener('click', async event => {
     const button = event.target.closest('[data-remove-work]');
     if (!button) return;
-    const items = getWorkItems();
-    items.splice(Number(button.dataset.removeWork), 1);
-    localStorage.setItem(WORK_STORAGE_KEY, JSON.stringify(items));
-    renderItems();
-    initializeWorkGallery();
+    const items = await getWorkItems();
+    const item = items[Number(button.dataset.removeWork)];
+    if (item) await supabaseClient.storage.from(WORK_BUCKET).remove([item.beforeName, item.afterName]);
+    await renderItems();
+    await initializeWorkGallery();
   });
 
-  signout.addEventListener('click', () => {
-    sessionStorage.removeItem('divineFirmDirector');
+  signout.addEventListener('click', async () => {
+    if (supabaseClient) await supabaseClient.auth.signOut();
     manager.hidden = true;
     loginPanel.hidden = false;
   });
 }
 
-function readImage(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
+async function signInDirector(formData, status, showManager) {
+  if (!supabaseClient) {
+    status.textContent = 'The photo service is unavailable.';
+    return;
+  }
+  const { error } = await supabaseClient.auth.signInWithPassword({
+    email: formData.get('director-email'),
+    password: formData.get('director-password')
   });
+  if (error) {
+    status.textContent = error.message;
+    return;
+  }
+  status.textContent = '';
+  showManager();
+}
+
+function getExtension(file) {
+  const extension = file.name.split('.').pop().toLowerCase();
+  return ['jpg', 'jpeg', 'png', 'webp', 'gif'].includes(extension) ? extension : 'jpg';
 }
 
 if (document.readyState === 'loading') {
