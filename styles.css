@@ -398,19 +398,18 @@ h2 {
 }
 
 .hero-image {
-  position: relative;
-  height: 470px;
-  border-radius: 28px;
+  width: 100%;
+  height: auto;
   overflow: hidden;
-  box-shadow: var(--shadow);
-  background: #e9f5f2;
 }
 
 .hero-photo {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: cover; /* or 'contain' if you want the full image visible */
+  display: block;
 }
+
 
 .hero-card.overlay {
   position: absolute;
