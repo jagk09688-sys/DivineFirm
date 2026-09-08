@@ -1155,4 +1155,24 @@ h2 {
     grid-template-columns: 1fr !important;
   }
 }
+@media (max-width: 768px) {
+  .hero-image {
+    height: auto !important;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-card {
+    position: static !important;
+    margin-top: 1rem;
+  }
+}
 
