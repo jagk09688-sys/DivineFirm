@@ -400,15 +400,14 @@ h2 {
 .hero-image {
   width: 100%;
   height: auto;
-  overflow: hidden;
 }
 
 .hero-photo {
   width: 100%;
   height: auto;
-  object-fit: cover; /* or 'contain' if you want the full image visible */
-  display: block;
+  object-fit: contain; /* shows full image without cropping */
 }
+
 
 
 .hero-card.overlay {
@@ -1168,6 +1167,21 @@ h2 {
 
   .hero-grid {
     grid-template-columns: 1fr !important;
+  }
+
+  .hero-card {
+    position: static !important;
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero-image {
+    height: auto !important;
+  }
+
+  .hero-photo {
+    height: auto !important;
+    object-fit: contain !important;
   }
 
   .hero-card {
